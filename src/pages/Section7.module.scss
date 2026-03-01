@@ -1,0 +1,68 @@
+.section {
+  position: relative;
+  height: 4400px;
+  width: 100%;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    text-align: center;
+    position: relative;
+    padding-top: 10em;
+    min-height: 650px;
+    img {
+      position: absolute;
+      width: 80%;
+      left: 10%;
+    }
+
+    .sub-title {
+      font-size: 2.6em;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 0.4em;
+      margin-top: 3em;
+      position: relative;
+      text-shadow: 1px 1px 14px rgb(74 133 205);
+    }
+    .main-title {
+      line-height: 1.4;
+      letter-spacing: 10px;
+      font-size: 4.4em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 14px rgb(74 133 205);
+      position: relative;
+      margin-top: 0.2em;
+    }
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-size: 4em;
+      line-height: 1.4;
+      color: #666;
+      margin-top: 2em;
+      margin-bottom: 3em;
+    }
+    .pic {
+      width: 80%;
+      margin: 0 auto;
+      &.smaller {
+        width: 76%;
+      }
+      &.bigger {
+        width: 90%;
+      }
+    }
+  }
+}
