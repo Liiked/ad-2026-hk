@@ -1,6 +1,16 @@
+:global {
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.4;
+  }
+  .swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1;
+  }
+}
 .section {
   position: relative;
-  height: 1420px;
+  height: 1490px;
   width: 100%;
   z-index: 1;
   .bg {
@@ -57,6 +67,10 @@
     width: 100%;
     .scroll-item {
       width: 100%;
+    }
+    .swiper-slide {
+      padding-bottom: 4em;
+      background: #99cdfb;
     }
   }
   .footer {

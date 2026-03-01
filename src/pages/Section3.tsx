@@ -10,7 +10,8 @@ import scroll2 from "../assets/imgs/sec1/1-2.jpg";
 
 // 导入Swiper库
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -18,7 +19,7 @@ import styles from "./Section3.module.scss";
 import classNames from "classnames";
 import { useEffect, useRef } from "react";
 
-const PlayInterval = 2000; // 自动轮播间隔时间（毫秒）
+const PlayInterval = 20000; // 自动轮播间隔时间（毫秒）
 
 interface Sec3Props {
   onScrollToSec4?: () => void;
@@ -73,10 +74,11 @@ export default function Sec3({ onScrollToSec4, onScrollToSec6 }: Sec3Props) {
           <div className={styles["scroll"]}>
             <Swiper
               ref={swiperRef}
-              modules={[Autoplay]}
+              modules={[Autoplay, Pagination]}
               spaceBetween={16}
               slidesPerView={1}
               loop={true}
+              pagination={true}
               autoplay={{
                 delay: PlayInterval,
                 disableOnInteraction: true,
