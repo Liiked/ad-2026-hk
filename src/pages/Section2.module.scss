@@ -1,0 +1,128 @@
+@keyframes scrollSlideIn {
+  0% {
+    opacity: 0.4;
+    transform: translateY(15px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scrollFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section {
+  position: relative;
+  height: 4800px;
+  width: 100%;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .grid-pic {
+    width: 48%;
+  }
+  .desc {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 2em;
+    line-height: 1.4;
+    font-size: 18px;
+  }
+  .header {
+    position: relative;
+    text-align: center;
+    h2 {
+      font-size: 3em;
+      font-family: serif;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    p {
+      font-size: 2em;
+      line-height: 2;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+    }
+  }
+  .content {
+    padding-top: 4em;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    .dialog {
+      text-align: center;
+      position: relative;
+    }
+    .grid-bottom {
+      margin-top: -12em;
+      z-index: 2;
+      position: relative;
+    }
+    .scroll {
+      width: 60%;
+      margin: 0 auto;
+      margin-left: 16em;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 16px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -webkit-scroll-snap-stop: always;
+      scroll-snap-stop: always;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &:active {
+        transition: scroll-behavior 0.1s ease;
+      }
+    }
+    .scroll-item {
+      width: 90%;
+      margin-left: 2em;
+      scroll-snap-align: center;
+      will-change: transform, opacity, filter;
+    }
+    .scroll-item-1 {
+      margin-top: -0.5em;
+    }
+    .scroll-item-2 {
+      margin-top: 1em;
+    }
+    .scroll-item-3 {
+      margin-top: 0em;
+    }
+    .scroll-item-4 {
+      margin-top: 0em;
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 0 2em;
+    font-size: 1.4em;
+    line-height: 2;
+    position: relative;
+    img {
+      margin-bottom: 2em;
+    }
+  }
+}

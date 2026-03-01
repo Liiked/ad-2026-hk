@@ -1,0 +1,70 @@
+.section {
+  position: relative;
+  height: 1880px;
+  width: 100%;
+  z-index: 1;
+  padding-bottom: 2rem;
+  .bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .grid-pic {
+    width: 90%;
+  }
+  .header {
+    text-align: center;
+    h2 {
+      font-size: 3em;
+      font-family: serif;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+    img {
+      margin-bottom: -8em;
+    }
+  }
+  .content {
+    text-align: center;
+
+    .title {
+      margin-top: 100px;
+    }
+    .location-list {
+      width: 80%;
+      height: 900px;
+      margin: 0 10%;
+      margin-top: 100px;
+      position: relative;
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 80vw;
+        max-width: 100%;
+      }
+      strong {
+        font-weight: bold;
+        margin-right: 1em;
+      }
+      .icon {
+        width: 40px;
+        margin-right: 1em;
+      }
+      ul {
+        padding-top: 100px;
+        padding-left: 50px;
+        color: white;
+        letter-spacing: 4px;
+      }
+      li {
+        display: flex;
+        font-size: 48px;
+        padding-bottom: 1em;
+      }
+    }
+  }
+}
