@@ -1,0 +1,97 @@
+.section {
+  position: relative;
+  height: 4400px;
+  width: 100%;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    text-align: center;
+    position: relative;
+    padding-top: 10em;
+    .pic {
+      width: 80%;
+      left: 10%;
+      &.smaller {
+        width: 60%;
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+    .hanging-text {
+      width: 80%;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 6em;
+      .text-block {
+        position: absolute;
+        left: 10%;
+
+        &.text1 {
+          top: 10em;
+          left: 10%;
+        }
+        &.text2 {
+          top: 27em;
+          left: 20%;
+        }
+        &.text3 {
+          top: 89%;
+          left: 6%;
+        }
+      }
+    }
+    h2 {
+      font-size: 2.4em;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+      color: #666;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      font-weight: 500;
+      &.contact {
+        margin: 0;
+      }
+      &.highlight {
+        position: relative;
+        z-index: 1;
+        &::after {
+          content: "";
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0%;
+          height: 10px;
+          background-color: #fbf88d;
+          z-index: -1;
+        }
+      }
+    }
+    p {
+      font-size: 1.4em;
+      color: #666;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    .pic {
+      width: 100%;
+
+      &.smaller {
+        width: 76%;
+      }
+      &.bigger {
+        width: 90%;
+      }
+    }
+  }
+}
