@@ -14,6 +14,7 @@ export default function Sec9() {
       </section>
       <section className={styles["content"]}>
         <img src={pic1} alt="" />
+        <p>＊指彩妝修飾效果</p>
       </section>
       <section className={styles["footer"]}>
         <img src={icon1} alt="" />

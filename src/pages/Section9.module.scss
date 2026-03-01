@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  height: 2100px;
+  height: 2400px;
   width: 100%;
   z-index: 1;
   .bg {
@@ -26,6 +26,14 @@
       padding-top: 4em;
       width: 90%;
       margin: 0 auto;
+    }
+    p {
+      margin-top: 2em;
+      margin-bottom: 6em;
+      margin-left: 6%;
+      text-align: left;
+      font-size: 1.4em;
+      color: #555;
     }
   }
   .footer {
