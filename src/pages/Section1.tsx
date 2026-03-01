@@ -3,7 +3,6 @@ import bg2 from "../assets/imgs/sec2/bg-2.png";
 import title1 from "../assets/imgs/sec2/title-1.png";
 import icon1 from "../assets/imgs/sec2/icon-1.png";
 import styles from "./Section1.module.scss";
-import classnames from "classnames";
 
 export default function Sec1() {
   return (
