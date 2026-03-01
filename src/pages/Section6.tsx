@@ -8,7 +8,7 @@ export interface Sec4Handle {
   scrollIntoView: () => void;
 }
 
-const Sec6 = forwardRef<Sec4Handle>((props, ref) => {
+const Sec6 = forwardRef<Sec4Handle>((_props, ref) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useImperativeHandle(ref, () => ({
