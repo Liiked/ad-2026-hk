@@ -1,80 +1,127 @@
-import bg1 from "../assets/newImgs/sec5/back.png";
-import featureTitle from "../assets/newImgs/sec3/1.png";
-import pic1 from "../assets/newImgs/sec5/1.png";
-import pic2 from "../assets/newImgs/sec5/2.png";
-import pic3 from "../assets/newImgs/sec5/3.png";
-import pic4 from "../assets/newImgs/sec5/4.png";
-import pic5 from "../assets/newImgs/sec5/5.png";
-
-import styles from "./Section5.module.scss";
 import classNames from "classnames";
-// import classNames from "classnames";
+import bg1 from "../assets/imgs/sec4/bg-4.png";
+import icon from "../assets/imgs/sec4/icon-3.png";
+import pic1 from "../assets/imgs/sec4/pic-1.png";
+import pic2 from "../assets/imgs/sec4/pic-2.png";
+import pic3 from "../assets/imgs/sec4/pic-3.png";
+import pic4 from "../assets/imgs/sec4/pic-4.png";
+import styles from "./Section5.module.scss";
 
 export default function Sec5() {
   return (
     <div className={styles["section"]}>
       <img src={bg1} alt="" className={styles["bg"]} />
       <section className={styles["header"]}>
-        <div className={styles["feature-title"]}>
-          <h4>How To Use</h4>
-          <img src={featureTitle} alt="" />
-        </div>
-        <p>Retuning Serum Mask</p>
-        <h2>使用方法</h2>
+        <h2>POINT</h2>
+        <p>特點</p>
       </section>
       <section className={styles["content"]}>
-        <section className={styles["usage-list"]}>
-          <div className={styles["usage-item"]}>
-            <img src={pic1} alt="" />
-            <p>作為特別護理使用的面膜，建議每週使用1~2次效果更佳</p>
+        <div className={styles["goods-card"]}>
+          <div className={styles["order"]}>
+            <img src={icon} alt="" />
+            <h5>Point</h5>
+            <h2>01</h2>
           </div>
-          <div
-            className={classNames(
-              styles["usage-item"],
-              styles["with-bottom-arrow"]
-            )}
-          >
-            <img src={pic2} alt="" />
-            <p>
-              請於潔面後的潔淨肌膚上使用。將面膜開口處展開，讓
-              <span className={styles["underline"]}>沒有網格襯墊的一面</span>
-              貼合肌膚。
-            </p>
-          </div>
-          <div
-            className={classNames(
-              styles["usage-item"],
-              styles["with-bottom-arrow"]
-            )}
-          >
-            <img src={pic3} alt="" />
-            <p>
-              <span className={styles["underline"]}>撕下網格襯墊</span>
-              ，將面膜緊貼於肌膚。靜置5～10分鐘。用手掌包裹臉部溫熱加壓，效果更佳。
-            </p>
-          </div>
-          <div className={styles["usage-item"]}>
-            <img src={pic4} alt="" />
-            <p>
-              取下面膜後，將殘留精華液輕拍至吸收。後續建議使用乳液或乳霜進行護理。
-            </p>
-          </div>
-        </section>
-      </section>
-      <section className={styles["footer"]}>
-        <div
-          className={styles["feature-title"]}
-          style={{ marginBottom: "-8em" }}
-        >
-          <h4 style={{ lineHeight: "1.4", paddingTop: "2em" }}>
-            Made <br />
-            in Japan
+          <h1 className={styles["title"]}>
+            高濃度<sup>★</sup>
+          </h1>
+          <h4 className={styles["subtitle"]}>
+            添加3種玻尿酸 <p className={styles["small-text"]}>（保濕成分）</p>
+            <br /> 高保水配方！
           </h4>
-          <img src={featureTitle} alt="" />
+          <img className={styles["pic"]} src={pic1} alt="" />
+          <p className={styles["desc"]}>
+            超低分子玻尿酸*深層滲透角質，聯手玻尿酸鈉於表層強力鎖水；
+            <br />
+            搭配肌膚吸附型玻尿酸**緊緊抓水，讓潤澤長效停留。
+          </p>
+          <div className={styles["tips"]}>
+            <p className={styles["tip"]}>
+              <sup>★</sup> 在 SKIN AQUA 系列產品中
+            </p>
+            <p className={styles["tip"]}>* 加水分解玻尿酸鈉</p>
+            <p className={styles["tip"]}>**羥丙基三甲基銨玻尿酸</p>
+          </div>
         </div>
-        <h1>日本品質</h1>
-        <img style={{ width: "96%" }} src={pic5} alt="" />
-        <p className={styles["tip"]}>※請注意，並非所有人皆不會出現皮膚刺激</p>
+        <div className={styles["goods-card"]}>
+          <div className={styles["order"]}>
+            <img src={icon} alt="" />
+            <h5>Point</h5>
+            <h2>02</h2>
+          </div>
+          <h1 className={classNames(styles["title"], styles["small"])}>
+            專為敏弱肌打造<sup>★</sup>
+          </h1>
+          <img className={styles["pic"]} src={pic2} alt="" />
+          <h4
+            className={classNames(styles["subtitle"], styles["small"])}
+            style={{ marginBottom: "1em" }}
+          >
+            以護膚為出發點！貼心呵護肌膚
+          </h4>
+          <h4
+            className={classNames(
+              styles["subtitle"],
+              styles["small"],
+              styles["bold"],
+            )}
+            style={{ marginBottom: "1em" }}
+          >
+            零酒精（乙醇）添加 無粉末配方
+          </h4>
+          <p className={styles["desc"]}>
+            隔絕花粉、PM2.5、灰塵等空氣髒污，可 使用日常清潔產品卸除。
+            <br />
+            通過肌膚過敏測試
+          </p>
+
+          <div className={styles["tips"]}>
+            <p className={styles["tip"]}>(並非所有人都完全不會產生過敏反應)</p>
+          </div>
+        </div>
+        <div className={styles["goods-card"]}>
+          <div className={styles["order"]}>
+            <img src={icon} alt="" />
+            <h5>Point</h5>
+            <h2>03</h2>
+          </div>
+          <h1
+            className={classNames(
+              styles["title"],
+              styles["small"],
+              styles["overflow-bottom-line"],
+            )}
+          >
+            採用「肌膚解放感」配方！<sup>★</sup>
+          </h1>
+          <h4
+            className={classNames(styles["subtitle"], styles["small"])}
+            style={{ marginBottom: "2em" }}
+          >
+            質地水潤清爽、完美告別黏膩
+            <br />
+            追求零負擔的親膚使用感受
+          </h4>
+          <img className={styles["pic"]} src={pic3} alt="" />
+        </div>
+        <div className={styles["goods-card"]}>
+          <div className={styles["order"]}>
+            <img src={icon} alt="" />
+            <h5>Point</h5>
+            <h2>04</h2>
+          </div>
+          <h1
+            className={classNames(
+              styles["title"],
+              styles["small"],
+              styles["no-bottom-line"],
+            )}
+            style={{ marginBottom: "2.6em", letterSpacing: "0.1em" }}
+          >
+            追求好用順手的瓶身設計
+          </h1>
+          <img className={styles["pic"]} src={pic4} alt="" />
+        </div>
       </section>
     </div>
   );
