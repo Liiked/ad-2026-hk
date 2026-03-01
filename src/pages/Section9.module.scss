@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+  height: 2100px;
+  width: 100%;
+  z-index: 1;
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    text-align: center;
+    img {
+      padding-top: 8em;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .content {
+    text-align: center;
+    img {
+      padding-top: 4em;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  .footer {
+    text-align: center;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
