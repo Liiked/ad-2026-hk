@@ -50,7 +50,7 @@ export default function Sec5() {
             <h2>02</h2>
           </div>
           <h1 className={classNames(styles["title"], styles["small"])}>
-            專為敏弱肌打造<sup>★</sup>
+            專為敏弱肌打造
           </h1>
           <img className={styles["pic"]} src={pic2} alt="" />
           <h4
@@ -92,7 +92,7 @@ export default function Sec5() {
               styles["overflow-bottom-line"],
             )}
           >
-            採用「肌膚解放感」配方！<sup>★</sup>
+            採用「肌膚解放感」配方！
           </h1>
           <h4
             className={classNames(styles["subtitle"], styles["small"])}
