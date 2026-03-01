@@ -4,11 +4,24 @@ import title2 from "../assets/imgs/sec3/title-3.png";
 import icon from "../assets/imgs/sec3/icon-2.png";
 
 import styles from "./Section4.module.scss";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 // import classNames from "classnames";
 
-export default function Sec4() {
+export interface Sec4Handle {
+  scrollIntoView: () => void;
+}
+
+const Sec4 = forwardRef<Sec4Handle>((props, ref) => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useImperativeHandle(ref, () => ({
+    scrollIntoView: () => {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    },
+  }));
+
   return (
-    <div className={styles["section"]}>
+    <div className={styles["section"]} ref={sectionRef} id="section4">
       <img src={bg1} alt="" className={styles["bg"]} />
       <section className={styles["header"]}>
         <h2>
@@ -55,4 +68,6 @@ export default function Sec4() {
       </section>
     </div>
   );
-}
+});
+
+export default Sec4;

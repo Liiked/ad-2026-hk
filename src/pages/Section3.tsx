@@ -16,58 +16,54 @@ import "swiper/css/autoplay";
 
 import styles from "./Section3.module.scss";
 import classNames from "classnames";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const PlayInterval = 2000; // 自动轮播间隔时间（毫秒）
 
-export default function Sec3() {
+interface Sec3Props {
+  onScrollToSec4?: () => void;
+  onScrollToSec6?: () => void;
+}
+
+export default function Sec3({ onScrollToSec4, onScrollToSec6 }: Sec3Props) {
   const swiperRef = useRef<any>(null);
   const observerRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  // 检测轮播区域是否进入视口
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.5, // 当50%的元素进入视口时触发
-        rootMargin: "0px 0px -100px 0px", // 微调触发区域
-      },
-    );
-
-    if (observerRef.current) {
-      observer.observe(observerRef.current);
-    }
-
-    return () => {
-      if (observerRef.current) {
-        observer.unobserve(observerRef.current);
-      }
-    };
-  }, []);
 
   // 根据可见性控制自动轮播
   useEffect(() => {
     if (swiperRef.current) {
       // ts-ignore
       const swiper = (swiperRef.current as any).swiper;
-      if (isVisible) {
-        swiper.autoplay.start();
-      } else {
-        swiper.autoplay.stop();
-      }
+      swiper.autoplay.start();
+      // swiper.autoplay.stop();
     }
-  }, [isVisible]);
+  }, []);
 
   // TODO: 轮播图点击事件，跳转到对应链接
   const onClickBanner1 = () => {
-    window.open("https://www.kao.com/jp/curel/lineup/facewash/", "_blank");
+    handleScrollToSec4();
   };
   const onClickBanner2 = () => {
-    window.open("https://www.kao.com/jp/curel/lineup/facewash/", "_blank");
+    handleScrollToSec6();
+  };
+
+  const handleScrollToSec4 = () => {
+    if (onScrollToSec4) {
+      onScrollToSec4();
+    } else {
+      // 备用方案：直接使用DOM滚动（仅用于测试）
+      const sec4 = document.getElementById("section4");
+      sec4?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleScrollToSec6 = () => {
+    if (onScrollToSec6) {
+      onScrollToSec6();
+    } else {
+      // 备用方案：直接使用DOM滚动（仅用于测试）
+      const sec6 = document.getElementById("section6");
+      sec6?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
