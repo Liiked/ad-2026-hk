@@ -23,7 +23,7 @@ export default function Main() {
   };
 
   useEffect(() => {
-    document.title = "活动页";
+    document.title = "樂敦製藥";
   }, []);
 
   return (

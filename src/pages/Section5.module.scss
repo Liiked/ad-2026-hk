@@ -95,6 +95,7 @@
         &.overflow-bottom-line {
           &::after {
             max-width: 60vw;
+            width: 80%;
             left: 6%;
           }
         }
